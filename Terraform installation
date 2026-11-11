@@ -1,0 +1,106 @@
+Terraform installation
+For your Windows 11 laptop, you need to install Terraform separately. The Mac installation does not install it on Windows.
+
+I'll guide you step by step.
+
+## Step 1: Download Terraform for Windows
+
+Open the official HashiCorp download page:
+
+[Download Terraform – Official Website](https://developer.hashicorp.com/terraform/install?utm_source=chatgpt.com)
+
+Download:
+
+- Version: 1.17.1
+- Operating System: Windows
+- Architecture: AMD64 (64-bit)
+
+Or download the ZIP directly:
+
+[Terraform 1.17.1 Windows AMD64 ZIP](https://releases.hashicorp.com/terraform/1.17.1/terraform_1.17.1_windows_amd64.zip?utm_source=chatgpt.com)
+
+## Step 2: Extract the ZIP
+
+1. Open Downloads.
+2. Right-click `terraform_1.17.1_windows_amd64.zip`.
+3. Select Extract All.
+4. You will get `terraform.exe`.
+
+## Step 3: Create a Terraform folder
+
+1. Open File Explorer.
+2. Go to `C:\`.
+3. Create a folder named `Terraform`.
+4. Move `terraform.exe` into it.
+
+Your path should be:
+
+```
+C:\Terraform\terraform.exe
+```
+
+## Step 4: Add Terraform to PATH
+
+1. Press `Win + S`.
+2. Search for Edit the system environment variables.
+3. Open it.
+4. Click Environment Variables.
+5. Under User variables, select `Path`.
+6. Click Edit → New.
+7. Add:
+
+```
+C:\Terraform
+```
+
+8\. Click OK on all windows.
+
+## Step 5: Verify installation
+
+Close existing PowerShell windows and open a new PowerShell window.
+
+Run:
+
+```
+terraform -version
+```
+
+Expected output:
+
+```
+Terraform v1.17.1
+on windows_amd64
+```
+
+Then check:
+
+```
+where.exe terraform
+```
+
+Expected:
+
+```
+C:\Terraform\terraform.exe
+```
+
+## Step 6: Run Terraform in your Student API project
+
+Navigate to your project:
+
+```
+cd "C:\Users\SAI TEJA\Downloads\23071A0594\student-api"
+```
+
+Then:
+
+```
+terraform init
+terraform plan
+```
+
+Important: `terraform plan` requires a `.tf` configuration file. If your project doesn't have one, it will show `No configuration files`, which is not an installation problem.
+
+Installation target: Windows 11 – AMD64
+
+Complete Steps 1–5 and share your PowerShell output. I'll help you with the next step.
