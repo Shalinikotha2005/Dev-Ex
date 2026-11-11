@@ -1,0 +1,13 @@
+Program:
+Step 1: Create a repository named student-api on GitHub. If you already have a repository for this project,
+reuse it.
+Step 2: If Git has not been initialized, run:
+git init
+git add .
+git commit -m "Initial Student API commit"
+
+(git branch -M main)
+(git push -u origin main)
+Step 3: Connect to your own GitHub repository.
+Step 4: Commit and push the update.
+
