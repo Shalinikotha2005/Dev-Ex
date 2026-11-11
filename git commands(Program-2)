@@ -1,0 +1,68 @@
+Commands and Outputs
+Command 1: git --version
+
+Output: git version 2.49.0.windows.1
+
+Command 2: git config --global user.name
+
+“Shalini0810”
+Output: No output - command executed successfully.
+
+Command 3: git config --global user.email
+
+“shalinikotha08@gmail.com”
+Output: No output - command executed successfully.
+
+Command 4: git init
+
+Output: Git repository initialized successfully.
+
+Command 5: git status
+
+Output: README.txt was shown as an untracked file.
+
+File created: README.txt
+Git and GitHub Lab Activity
+Roll Number:
+23071A0594
+Name: Shalini
+
+Command 6: git add README.txt
+
+Output: No output - command executed successfully.
+
+Command 7: git status
+
+Output: README.txt was shown as a new file ready to be committed.
+
+Command 8: git commit -m "Initial commit - 23071A0594"
+
+Output: Initial commit created successfully.
+
+Command 9: git log --oneline
+
+Output: 49e42ga Initial commit - 23071A0594
+
+Command 10: git branch
+
+Output: * main
+
+GitHub Repository
+
+Repository name: student-api
+Command 1: git remote add origin https://github.com/Shalini0810/student-api.git
+
+Output: No output - command executed successfully.
+
+Command 2: git remote -v
+
+Output: The GitHub repository URL is displayed for fetch and push.
+
+Command 3: git push -u origin main
+
+Output: The main branch is pushed to GitHub successfully.
+
+Command 4: git status
+
+Output: On branch main. Your branch is up to date with origin/main. Nothing to commit, working tree
+clean.
