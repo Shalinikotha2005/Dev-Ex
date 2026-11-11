@@ -1,0 +1,24 @@
+Docker installation
+
+Install docker from official page
+Install WSL: wsl --version
+wsl --install
+wsl --version(Check version)
+Restart the computer
+
+Open docker
+
+Docker Commands
+
+Command 1: docker –version
+Command 2: docker info
+Command 3: docker images
+Command 4: docker ps -a
+Command 5: docker pull hello-world
+Command 6: docker run hello-world
+Command 7: docker image ls
+Command 8: docker container ls -a
+Command 9: docker system df
+Command 10: docker stop id
+Command 11: docker rm id
+Command 12: docker rmi hello-world
