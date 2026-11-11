@@ -1,0 +1,45 @@
+Aim: CircleCI/ Github Actions setup, explore the environment.
+
+Project Structure:
+student-api/
+└── .github/
+└── workflows/
+└── ci.yml
+
+Program:
+ci.yml
+
+name: Student API CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check server file
+        run: node --check server.js
+
+
+Outputs:
+Commit and push the workflow:
+git add .github/workflows/ci.yml
+git commit -m "Add GitHub Actions CI workflow"
+git push
