@@ -1,3 +1,6 @@
+//Aim: To develop a simple backend application using Node.js and Express.js that performs CRUD
+//operations through REST APIs.
+
 const express = require("express");
 
 const app = express();
