@@ -1,3 +1,5 @@
+Aim: Develop a simple containerized application using Docker.
+
 Project structure:
 student-api/
 ├── server.js
