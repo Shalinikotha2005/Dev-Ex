@@ -1,0 +1,70 @@
+Aim: Integrate Kubernetes and Docker
+
+Project Structure:
+student-api/
+├── server.js
+├── Dockerfile
+├── deployment.yaml
+└── service.yaml
+
+Program:
+Deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: student-api
+  template:
+    metadata:
+      labels:
+        app: student-api
+    spec:
+      containers:
+        - name: student-api
+          image: student-api:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+
+Service.yaml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: student-api-service
+spec:
+  type: NodePort
+  selector:
+    app: student-api
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 30080
+
+
+Output:
+Step 1: Verify the cluster.
+Command 1: kubectl get nodes
+
+The node should have status Ready.
+Step 2: Build the image if necessary.
+Command 2: docker build -t student-api .
+
+Step 3: Deploy the application.
+Command 3: kubectl apply -f deployment.yaml
+
+Command 4: kubectl apply -f service.yaml
+
+Step 4: Verify deployment.
+Command 5: kubectl get deployments
+
+Command 6: kubectl get pods
+
+Command 7: kubectl get services
+
+Check in http://localhost:30080/students
