@@ -1,0 +1,35 @@
+Aim: Hands-on parallel exploration of Terraform, and its configurations
+
+Project Structure:
+student-api/
+└── terraform-lab/
+└── main.tf
+Program:
+main.tf
+
+resource "terraform_data" "student_api_lab" {
+  input = "Student API infrastructure lab"
+}
+
+output "lab_message" {
+  value = terraform_data.student_api_lab.output
+}
+
+Implementation:
+Open the terminal in terraform-lab.
+
+Step 1: Initialize Terraform
+terraform init
+
+Step 2: Preview changes.
+terraform plan
+
+Step 3: Apply the configuration.
+terraform apply
+When prompted, type yes.
+
+Step 4: Retrieve the output.
+terraform output
+
+Step 5: Destroy the resource.
+terraform destroy
