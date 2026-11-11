@@ -1,0 +1,37 @@
+Aim: Automate the process of running containerized application developed in exercise 7 using Kubernetes
+
+Implementation and outputs:
+Step 1: Verify the current deployment
+Command 1: kubectl get deployments
+
+Command 2: kubectl get pods
+
+Step 2: Scale to three replicas
+Command 3: kubectl scale deployment student-api --replicas=3
+
+Command 4: kubectl get pods
+Three Student API pods are created and reach Running.
+
+Step 3: Demonstrate self-healing
+Copy the name of one Student API pod:
+Command 5: kubectl get pods
+
+Delete that specific pod:
+Command 6: kubectl delete pod YOUR_POD_NAME
+
+Check again:
+Command 7: kubectl get pods
+Kubernetes should create a replacement pod to maintain the desired replica count.
+
+Step 4: Restart the Deployment
+Command 8: kubectl rollout restart deployment student-api
+
+Command 9: kubectl rollout status deployment student-api
+Check whether the link is working or not
+http://localhost:30080/students
+
+Step 5: Restore one replica
+Command 10: kubectl scale deployment student-api --replicas=1
+
+Command 11: kubectl get pods
+Wait until the terminating pods disappear and one pod remains Running.
