@@ -1,0 +1,42 @@
+Aim: Integrate any of the suitable monitoring and logging dashboards with your application.
+
+Implementation and Output:
+Step 1: Start the Docker container
+docker start student-api-container
+
+Step 2: Verify the running container
+docker ps
+
+The output confirms that student-api-container is running and port 3000 is mapped to port 3000 on the host.
+
+Step 3: View application logs
+docker logs student-api-container
+
+This confirms that the application startup messages are available in the container logs.
+
+Step 4: Monitor resource utilization
+Open Docker Desktop and select student-api-container.
+Click the Stats tab to observe the resource usage.
+
+Step 5: Verify the API
+Open the browser and visit: http://localhost:3000/students
+[
+{
+"id": 101,
+"name": "Shalini",
+"age": 21,
+"department": "CSE"
+},
+{
+},
+{
+"id": 102,
+"name": "Varun",
+"age": 20,
+"department": "ECE"
+"id": 103,
+"name": "Varsha",
+"age": 22,
+"department": "CSE"
+}
+]
