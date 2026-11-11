@@ -1,0 +1,15 @@
+ Aim: Demonstrate continuous integration and development using CircleCi/Github Actions
+
+Step 1: Modify server.js, for example by adding a comment.
+// CI/CD demonstration - Student API
+
+Step 2: Commit and push the change.
+git add server.js
+git commit -m "Update Student API for CI/CD demonstration"
+git push
+
+Step 3: Open GitHub → your repository → Actions.
+
+Step 4: Click the latest workflow run and inspect the build job and its four steps.
+
+Step 5: Verify that the job finishes successfully.
