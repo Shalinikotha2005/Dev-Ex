@@ -1,0 +1,42 @@
+Project structure:
+student-api/
+├── server.js
+├── package.json
+├── package-lock.json
+├── Dockerfile
+└── .dockerignore
+
+Program:
+
+1. Dockerfile
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY server.js .
+EXPOSE 3000
+CMD ["node", "server.js"]
+
+2. .dockerignore
+node_modules/
+.git/
+.env
+
+Outputs:
+Build the Docker image from the project directory:
+Command 1: docker build -t student-api .
+
+Verify the image:
+Command 2: docker images
+
+Run the container:
+Command 3: docker run -d -p 3000:3000 --name student-api-container student-api
+
+Check the container:
+Command 4: docker ps
+
+Test the application at:
+Command 5: http://localhost:3000/students
+
+To stop the container:
+Command 6: docker stop student-api-container
